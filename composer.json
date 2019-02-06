@@ -1,0 +1,39 @@
+{
+    "name": "saeedphr/imail",
+    "description": ":Imail IMAP Email",
+    "license": "license",
+    "authors": [
+        {
+            "name": "saeedphr",
+            "email": "saeed.parhizkary@gmail.com"
+        }
+    ],
+    "homepage": "https://github.com/saeedphr/imail",
+    "keywords": ["Laravel", "imail"],
+    "require": {
+        "php-imap/php-imap": "dev-master"
+    },
+    "require-dev": {
+        "php-imap/php-imap": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "saeedphr\\imail\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "saeedphr\\imail\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "saeedphr\\imail\\imailServiceProvider"
+            ],
+            "aliases": {
+                "imail": "saeedphr\\imail\\Facades\\imail"
+            }
+        }
+    }
+}
